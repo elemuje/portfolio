@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FAQ, CONTACT } from '../data'
+import { FAQ as faqData, CONTACT } from '../data'
 import { useScrollReveal } from '../hooks'
 import styles from './FAQ.module.css'
 
@@ -46,7 +46,7 @@ export default function FAQ() {
           </div>
 
           <div className={`${styles.list} reveal`}>
-            {FAQ.map((f, i) => (
+            {faqData.map((f, i) => (
               <FaqItem
                 key={i}
                 q={f.q}
