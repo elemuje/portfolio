@@ -1,0 +1,188 @@
+.section { padding: 100px 0; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--orange);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.sub {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+/* Links */
+.links { display: flex; flex-direction: column; gap: 12px; }
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--dark2);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 16px 20px;
+  text-decoration: none;
+  color: var(--white);
+  transition: border-color 0.2s, transform 0.2s, background 0.2s;
+}
+.link:hover {
+  border-color: var(--border);
+  background: rgba(247, 147, 26, 0.04);
+  transform: translateX(4px);
+}
+
+.linkIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background: rgba(247, 147, 26, 0.1);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.linkLabel {
+  font-size: 0.7rem;
+  color: var(--dim);
+  font-family: 'Space Mono', monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.linkVal { font-size: 0.9rem; font-weight: 600; }
+
+/* Form Box */
+.formBox {
+  background: var(--dark2);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 36px;
+  position: relative;
+}
+.formBox::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--orange), var(--orange3), transparent);
+  border-radius: 10px 10px 0 0;
+}
+
+.formTitle { font-size: 1.1rem; font-weight: 800; margin-bottom: 28px; }
+
+.fg { margin-bottom: 16px; }
+
+.fg label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: 'Space Mono', monospace;
+  color: var(--dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.fg input,
+.fg textarea,
+.fg select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 12px 16px;
+  color: var(--white);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.2s, background 0.2s;
+}
+.fg input:focus,
+.fg textarea:focus,
+.fg select:focus {
+  border-color: var(--orange);
+  background: rgba(247, 147, 26, 0.04);
+}
+
+.fg textarea { min-height: 110px; }
+.fg select { appearance: none; cursor: pointer; }
+.fg select option { background: var(--dark2); }
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.submitBtn {
+  width: 100%;
+  background: var(--orange);
+  color: #000;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 6px;
+  font-family: 'Space Mono', monospace;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(247, 147, 26, 0.3);
+}
+.submitBtn:hover:not(:disabled) {
+  background: var(--orange3);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 30px rgba(247, 147, 26, 0.45);
+}
+.submitBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.successMsg {
+  text-align: center;
+  padding: 32px 16px;
+  color: var(--orange);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.88rem;
+  letter-spacing: 0.06em;
+}
+
+.errorMsg {
+  text-align: center;
+  padding: 14px;
+  color: #ef4444;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; gap: 40px; }
+  .row { grid-template-columns: 1fr; }
+}

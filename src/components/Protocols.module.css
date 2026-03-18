@@ -1,0 +1,46 @@
+.section {
+  padding: 60px 0;
+  border-top: 1px solid var(--border2);
+}
+
+.label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--dim);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--dark2);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 12px 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.badge:hover {
+  border-color: var(--border);
+  transform: translateY(-2px);
+}
+
+.icon { font-size: 1.3rem; }
+
+.name {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--muted);
+}

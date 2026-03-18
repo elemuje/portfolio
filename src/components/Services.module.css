@@ -1,0 +1,89 @@
+.section { padding: 100px 0; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+}
+
+.card {
+  background: var(--dark2);
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+.card:hover { background: rgba(247, 147, 26, 0.04); }
+.card:hover .arrow {
+  transform: translate(4px, -4px);
+  color: var(--orange);
+}
+
+.num {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--dim);
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
+
+.icon {
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  background: rgba(247, 147, 26, 0.06);
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 0.87rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card ul li {
+  font-size: 0.82rem;
+  color: var(--dim);
+  font-family: 'Space Mono', monospace;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.card ul li::before {
+  content: '▸';
+  color: var(--orange);
+  font-size: 0.7rem;
+}
+
+.arrow {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  color: var(--dim);
+  font-size: 1.1rem;
+  transition: transform 0.2s, color 0.2s;
+}
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+}

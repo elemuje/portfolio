@@ -1,0 +1,36 @@
+.wrapper {
+  border-top: 1px solid var(--border2);
+  border-bottom: 1px solid var(--border2);
+  padding: 18px 0;
+  overflow: hidden;
+  background: rgba(247, 147, 26, 0.03);
+}
+
+.track {
+  display: flex;
+  white-space: nowrap;
+  animation: ticker 28s linear infinite;
+}
+
+.item {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--orange);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0 48px;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+.item::before {
+  content: '◆';
+  font-size: 0.5rem;
+  margin-right: 16px;
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
