@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Adebimpe Mujeeb Adegoke — Web3 Builder & Crypto Educator</title>
+<meta name="description" content="Web3 Community Builder, Crypto Educator & Vibe Code Developer. Trained 5000+ youths, generated $2M+ trading volume. Founder of Al-Halal Crypto Academy."/>
+<meta name="keywords" content="Web3, Crypto Educator, Community Builder, DeFi, Blockchain, Nigeria, Al-Halal Crypto Academy"/>
+<meta name="author" content="Adebimpe Mujeeb Adegoke"/>
+<meta property="og:title" content="Adebimpe Mujeeb Adegoke — Web3 Builder & Crypto Educator"/>
+<meta property="og:description" content="Trained 5,000+ youths in crypto. Generated $2M+ DEX volume. Founder of Al-Halal Crypto Academy."/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@Elemudev"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+:root{--black:#000;--dark:#0a0a0a;--dark2:#111;--dark3:#1a1a1a;--orange:#F7931A;--orange3:#FFAD33;--amber:#FFC107;--white:#fff;--off:#E8E8E8;--muted:#888;--dim:#444;--border:rgba(247,147,26,0.18);--border2:rgba(247,147,26,0.08);--glow:rgba(247,147,26,0.3);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--white);font-family:'Outfit',sans-serif;line-height:1.6;overflow-x:hidden;}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:999;opacity:0.5;}
+h1,h2,h3,h4{font-family:'Outfit',sans-serif;line-height:1.1;}
+.orange-text{color:var(--orange);}
+.container{max-width:1140px;margin:0 auto;padding:0 28px;}
+section{position:relative;z-index:1;}
+
+/* BANNER */
+.avail-banner{background:var(--orange);color:#000;text-align:center;padding:10px 20px;font-family:'Space Mono',monospace;font-size:0.73rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;position:fixed;top:0;left:0;right:0;z-index:200;}
+.avail-banner a{color:#000;text-decoration:underline;margin-left:12px;font-weight:700;}
+
+/* NAV */
+nav{position:fixed;top:36px;left:0;right:0;z-index:100;padding:18px 0;transition:all 0.3s;}
+nav.scrolled{top:0;background:rgba(0,0,0,0.94);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);padding:13px 0;}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{font-family:'Space Mono',monospace;font-size:1rem;font-weight:700;color:var(--white);text-decoration:none;}
+.nav-logo .o{color:var(--orange);}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center;}
+.nav-links a{font-size:0.78rem;font-weight:500;color:var(--muted);text-decoration:none;letter-spacing:0.05em;text-transform:uppercase;transition:color 0.2s;font-family:'Space Mono',monospace;}
+.nav-links a:hover{color:var(--orange);}
+.nav-hire{background:var(--orange)!important;color:#000!important;padding:8px 20px;border-radius:6px;font-weight:700!important;}
+.nav-hire:hover{background:var(--orange3)!important;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hamburger span{width:22px;height:2px;background:var(--white);border-radius:2px;}
+.mobile-nav{display:none;position:fixed;top:0;left:0;right:0;z-index:99;background:rgba(0,0,0,0.98);border-bottom:1px solid var(--border);padding:80px 28px 32px;flex-direction:column;gap:18px;}
+.mobile-nav.open{display:flex;}
+.mobile-nav a{color:var(--muted);text-decoration:none;font-family:'Space Mono',monospace;font-size:0.95rem;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.05);}
+.mobile-nav a:hover{color:var(--orange);}
+.mob-close{position:absolute;top:24px;right:28px;background:none;border:1px solid var(--border);color:var(--muted);font-size:1rem;cursor:pointer;padding:6px 12px;border-radius:6px;font-family:'Space Mono',monospace;}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;padding:160px 0 80px;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+.hero-grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(247,147,26,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(247,147,26,0.07) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 0%,transparent 100%);}
+.hero-glow{position:absolute;width:900px;height:900px;background:radial-gradient(circle,rgba(247,147,26,0.07) 0%,transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%);border-radius:50%;}
+.hero-glow2{position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(247,147,26,0.12) 0%,transparent 70%);top:20%;left:-80px;border-radius:50%;animation:breathe 6s ease-in-out infinite;}
+@keyframes breathe{0%,100%{transform:scale(1);opacity:0.8;}50%{transform:scale(1.1);opacity:1;}}
+.hero-btc{position:absolute;right:-60px;top:50%;transform:translateY(-50%);font-size:40vw;font-weight:900;color:rgba(247,147,26,0.04);line-height:1;user-select:none;font-family:'Outfit',sans-serif;}
+.hero-content{position:relative;z-index:2;max-width:860px;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);border-radius:4px;padding:7px 14px;font-family:'Space Mono',monospace;font-size:0.72rem;font-weight:700;color:var(--orange);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:32px;background:rgba(247,147,26,0.06);}
+.blink{width:8px;height:8px;background:var(--orange);border-radius:50%;box-shadow:0 0 8px var(--orange);animation:blinkA 1.4s ease-in-out infinite;}
+@keyframes blinkA{0%,100%{opacity:1;}50%{opacity:0.2;}}
+.hero-title{font-size:clamp(3rem,7vw,5.5rem);font-weight:900;letter-spacing:-0.04em;margin-bottom:28px;line-height:1.02;}
+.hero-title .accent{display:block;color:var(--orange);}
+.hero-sub{font-size:1.05rem;color:var(--muted);max-width:560px;margin-bottom:48px;line-height:1.75;}
+.hero-sub strong{color:var(--off);font-weight:600;}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:60px;}
+.btn-orange{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#000;padding:14px 32px;border-radius:6px;font-size:0.9rem;font-weight:700;text-decoration:none;transition:background 0.2s,transform 0.2s,box-shadow 0.2s;box-shadow:0 0 24px rgba(247,147,26,0.35);font-family:'Space Mono',monospace;}
+.btn-orange:hover{background:var(--orange3);transform:translateY(-2px);box-shadow:0 8px 32px rgba(247,147,26,0.5);}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid rgba(255,255,255,0.18);color:var(--off);padding:14px 32px;border-radius:6px;font-size:0.9rem;font-weight:600;text-decoration:none;transition:border-color 0.2s,color 0.2s,transform 0.2s;font-family:'Space Mono',monospace;}
+.btn-outline:hover{border-color:var(--orange);color:var(--orange);transform:translateY(-2px);}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;background:rgba(247,147,26,0.08);border:1px solid var(--border);color:var(--orange);padding:14px 32px;border-radius:6px;font-size:0.9rem;font-weight:700;text-decoration:none;transition:background 0.2s,transform 0.2s;font-family:'Space Mono',monospace;}
+.btn-ghost:hover{background:rgba(247,147,26,0.15);transform:translateY(-2px);}
+.btn-ghost-sm{display:inline-flex;align-items:center;gap:8px;background:rgba(247,147,26,0.08);border:1px solid var(--border);color:var(--orange);padding:11px 22px;border-radius:6px;font-size:0.8rem;font-weight:700;text-decoration:none;font-family:'Space Mono',monospace;transition:background 0.2s,transform 0.2s;}
+.btn-ghost-sm:hover{background:rgba(247,147,26,0.15);transform:translateY(-2px);}
+.stats-row{display:flex;border:1px solid var(--border);border-radius:8px;overflow:hidden;background:rgba(247,147,26,0.03);max-width:640px;}
+.stat-cell{flex:1;padding:20px 24px;border-right:1px solid var(--border);}
+.stat-cell:last-child{border-right:none;}
+.stat-num{font-family:'Space Mono',monospace;font-size:1.7rem;font-weight:700;color:var(--orange);display:block;margin-bottom:4px;}
+.stat-lbl{font-size:0.7rem;color:var(--dim);font-family:'Space Mono',monospace;letter-spacing:0.06em;text-transform:uppercase;}
+
+/* MARQUEE */
+.marquee-section{border-top:1px solid var(--border2);border-bottom:1px solid var(--border2);padding:18px 0;overflow:hidden;background:rgba(247,147,26,0.03);}
+.marquee-track{display:flex;animation:ticker 28s linear infinite;white-space:nowrap;}
+.marquee-item{font-family:'Space Mono',monospace;font-size:0.75rem;font-weight:700;color:var(--orange);letter-spacing:0.12em;text-transform:uppercase;padding:0 48px;display:flex;align-items:center;gap:16px;opacity:0.7;}
+.marquee-item::before{content:'◆';font-size:0.5rem;}
+@keyframes ticker{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* SECTION COMMON */
+.section-tag{display:block;font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--orange);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:12px;}
+.section-title{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:900;letter-spacing:-0.03em;margin-bottom:20px;line-height:1.1;}
+.section-sub{font-size:0.97rem;color:var(--muted);max-width:520px;}
+.section-header{margin-bottom:60px;}
+
+/* ABOUT */
+#about{padding:120px 0;}
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:80px;align-items:center;}
+.card-wrap{position:relative;}
+.corner{position:absolute;width:22px;height:22px;border-color:var(--orange);border-style:solid;border-width:0;z-index:2;}
+.c-tl{top:-1px;left:-1px;border-top-width:2px;border-left-width:2px;}
+.c-tr{top:-1px;right:-1px;border-top-width:2px;border-right-width:2px;}
+.c-bl{bottom:-1px;left:-1px;border-bottom-width:2px;border-left-width:2px;}
+.c-br{bottom:-1px;right:-1px;border-bottom-width:2px;border-right-width:2px;}
+.about-card{background:var(--dark2);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:40px;position:relative;overflow:hidden;}
+.about-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--orange),var(--orange3));}
+.about-ava{width:88px;height:88px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-size:1.3rem;font-weight:700;color:#000;margin-bottom:24px;box-shadow:0 0 30px rgba(247,147,26,0.4);overflow:hidden;}
+.about-ava img{width:100%;height:100%;object-fit:cover;border-radius:50%;}
+.about-name{font-size:1.15rem;font-weight:800;margin-bottom:4px;}
+.about-role{font-family:'Space Mono',monospace;font-size:0.75rem;color:var(--orange);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:24px;}
+.about-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;}
+.otag{border:1px solid var(--border);border-radius:4px;padding:4px 12px;font-size:0.75rem;font-weight:600;font-family:'Space Mono',monospace;color:var(--orange);background:rgba(247,147,26,0.06);letter-spacing:0.04em;}
+.otag.dim{border-color:rgba(255,255,255,0.1);color:var(--muted);background:rgba(255,255,255,0.03);}
+.about-divider{height:1px;background:rgba(255,255,255,0.06);margin:20px 0;}
+.mini-stats{display:flex;gap:0;}
+.ms-item{flex:1;text-align:center;padding:14px 8px;border:1px solid rgba(255,255,255,0.06);border-radius:6px;margin:0 4px;background:rgba(0,0,0,0.3);}
+.ms-num{font-family:'Space Mono',monospace;font-size:1.2rem;font-weight:700;color:var(--orange);display:block;margin-bottom:4px;}
+.ms-lbl{font-size:0.65rem;color:var(--dim);text-transform:uppercase;letter-spacing:0.06em;}
+.about-text p{color:var(--muted);margin-bottom:18px;font-size:0.95rem;line-height:1.75;}
+.about-text p strong{color:var(--off);font-weight:600;}
+.skills-list{margin-top:28px;}
+.skill-row-bar{margin-bottom:16px;}
+.skill-row-top{display:flex;justify-content:space-between;margin-bottom:6px;}
+.skill-name{font-family:'Space Mono',monospace;font-size:0.78rem;color:var(--off);}
+.skill-pct{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--orange);}
+.skill-track{height:4px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden;}
+.skill-fill{height:100%;background:linear-gradient(90deg,var(--orange),var(--orange3));border-radius:2px;width:0;transition:width 1.4s cubic-bezier(0.4,0,0.2,1);}
+
+/* ACHIEVEMENTS */
+#achievements{padding:0 0 100px;}
+.ach-outer{border:1px solid var(--border);border-radius:10px;overflow:hidden;position:relative;}
+.ach-outer::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--orange),transparent);}
+.ach-grid{display:grid;grid-template-columns:repeat(4,1fr);}
+.ach-item{padding:48px 32px;border-right:1px solid var(--border2);text-align:center;background:var(--dark2);transition:background 0.3s;}
+.ach-item:hover{background:rgba(247,147,26,0.04);}
+.ach-item:last-child{border-right:none;}
+.ach-num{font-family:'Space Mono',monospace;font-size:2.5rem;font-weight:700;color:var(--orange);display:block;margin-bottom:10px;text-shadow:0 0 30px rgba(247,147,26,0.4);}
+.ach-label{font-size:0.77rem;color:var(--muted);line-height:1.45;text-transform:uppercase;letter-spacing:0.04em;font-family:'Space Mono',monospace;}
+
+/* PROTOCOLS */
+#protocols{padding:60px 0;border-top:1px solid var(--border2);}
+.protocols-label{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--dim);letter-spacing:0.14em;text-transform:uppercase;text-align:center;margin-bottom:32px;}
+.protocols-row{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;}
+.proto-badge{display:flex;align-items:center;gap:10px;background:var(--dark2);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:12px 20px;transition:border-color 0.2s,transform 0.2s;}
+.proto-badge:hover{border-color:var(--border);transform:translateY(-2px);}
+.proto-icon{font-size:1.3rem;}
+.proto-name{font-family:'Space Mono',monospace;font-size:0.78rem;font-weight:700;color:var(--muted);}
+
+/* SERVICES */
+#services{padding:100px 0;}
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;}
+.svc-card{background:var(--dark2);padding:40px;position:relative;overflow:hidden;transition:background 0.3s;border:1px solid rgba(255,255,255,0.04);}
+.svc-card:hover{background:rgba(247,147,26,0.04);}
+.svc-card:hover .svc-arrow{transform:translate(4px,-4px);color:var(--orange);}
+.svc-num{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--dim);letter-spacing:0.1em;margin-bottom:20px;}
+.svc-icon{width:56px;height:56px;border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:20px;background:rgba(247,147,26,0.06);}
+.svc-card h3{font-size:1.05rem;font-weight:700;margin-bottom:12px;}
+.svc-card p{font-size:0.87rem;color:var(--muted);line-height:1.7;margin-bottom:16px;}
+.svc-card ul{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.svc-card ul li{font-size:0.82rem;color:var(--dim);font-family:'Space Mono',monospace;display:flex;align-items:center;gap:8px;}
+.svc-card ul li::before{content:'▸';color:var(--orange);font-size:0.7rem;}
+.svc-arrow{position:absolute;top:32px;right:32px;color:var(--dim);font-size:1.1rem;transition:transform 0.2s,color 0.2s;}
+
+/* PROJECTS */
+#projects{padding:100px 0;}
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+.projects-grid .proj-card:last-child:nth-child(odd){grid-column:1/-1;max-width:560px;margin:0 auto;width:100%;}
+.proj-card{background:var(--dark2);border:1px solid rgba(255,255,255,0.06);border-radius:8px;overflow:hidden;transition:border-color 0.3s,transform 0.3s;}
+.proj-card:hover{border-color:var(--border);transform:translateY(-4px);}
+.proj-thumb{height:168px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.pt1{background:#0a0700;}.pt2{background:#000a06;}.pt3{background:#04000a;}.pt4{background:#0a0400;}.pt5{background:#0a0500;}
+.proj-thumb-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(247,147,26,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(247,147,26,0.06) 1px,transparent 1px);background-size:40px 40px;}
+.proj-thumb-glow{position:absolute;inset:0;background:radial-gradient(circle at center,rgba(247,147,26,0.12),transparent 65%);}
+.proj-emoji{font-size:2.5rem;position:relative;z-index:2;}
+.proj-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.75);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.25s;}
+.proj-card:hover .proj-overlay{opacity:1;}
+.prev-btn{display:inline-flex;align-items:center;gap:6px;background:var(--orange);color:#000;padding:10px 22px;border-radius:6px;font-size:0.78rem;font-weight:700;text-decoration:none;font-family:'Space Mono',monospace;letter-spacing:0.04em;transition:background 0.2s;}
+.prev-btn:hover{background:var(--orange3);}
+.proj-body{padding:24px 26px;}
+.proj-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;}
+.ptag{font-family:'Space Mono',monospace;font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:3px 10px;border-radius:3px;}
+.ptag-o{background:rgba(247,147,26,0.12);color:var(--orange);}
+.ptag-w{background:rgba(255,255,255,0.06);color:var(--muted);}
+.proj-body h3{font-size:1.05rem;font-weight:700;margin-bottom:8px;}
+.proj-body p{font-size:0.85rem;color:var(--muted);margin-bottom:16px;line-height:1.65;}
+.proj-link{display:inline-flex;align-items:center;gap:6px;font-family:'Space Mono',monospace;font-size:0.75rem;font-weight:700;color:var(--orange);text-decoration:none;letter-spacing:0.04em;text-transform:uppercase;transition:gap 0.2s;}
+.proj-link:hover{gap:10px;}
+
+/* EXPERIENCE */
+#experience{padding:100px 0;}
+.exp-layout{display:grid;grid-template-columns:320px 1fr;gap:80px;align-items:start;}
+.timeline{position:relative;}
+.tl-line{position:absolute;left:0;top:8px;bottom:8px;width:1px;background:linear-gradient(to bottom,var(--orange),rgba(247,147,26,0.1));}
+.tl-item{padding-left:32px;padding-bottom:48px;position:relative;}
+.tl-item:last-child{padding-bottom:0;}
+.tl-dot{position:absolute;left:-5px;top:4px;width:11px;height:11px;border-radius:50%;background:var(--black);border:2px solid var(--orange);box-shadow:0 0 10px rgba(247,147,26,0.5);}
+.tl-date{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--orange);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;}
+.tl-org{font-size:1.05rem;font-weight:800;margin-bottom:3px;}
+.tl-role{font-size:0.82rem;color:var(--orange);font-weight:600;margin-bottom:12px;font-family:'Space Mono',monospace;}
+.tl-desc{font-size:0.87rem;color:var(--muted);line-height:1.7;margin-bottom:12px;}
+.tl-tags{display:flex;gap:8px;flex-wrap:wrap;}
+.tl-tag{font-size:0.68rem;font-family:'Space Mono',monospace;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:3px 10px;border-radius:3px;border:1px solid var(--border);color:var(--muted);background:rgba(247,147,26,0.04);}
+
+/* TESTIMONIALS */
+#testimonials{padding:100px 0;}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.testi-card{background:var(--dark2);border:1px solid rgba(255,255,255,0.05);border-radius:8px;padding:28px;transition:border-color 0.2s,transform 0.2s;}
+.testi-card:hover{border-color:var(--border);transform:translateY(-3px);}
+.testi-stars{font-size:0.75rem;margin-bottom:12px;letter-spacing:3px;color:var(--orange);}
+.testi-q{font-size:1.3rem;color:var(--orange);margin-bottom:8px;font-family:'Space Mono',monospace;}
+.testi-text{font-size:0.88rem;color:var(--muted);line-height:1.72;margin-bottom:22px;}
+.testi-author{display:flex;align-items:center;gap:12px;}
+.testi-ava{width:38px;height:38px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;color:#000;flex-shrink:0;font-family:'Space Mono',monospace;}
+.testi-name{font-size:0.87rem;font-weight:700;margin-bottom:2px;}
+.testi-handle{font-size:0.73rem;color:var(--dim);font-family:'Space Mono',monospace;}
+
+/* FAQ */
+#faq{padding:100px 0;}
+.faq-layout{display:grid;grid-template-columns:340px 1fr;gap:80px;align-items:start;}
+.faq-list{display:flex;flex-direction:column;gap:2px;}
+.faq-item{background:var(--dark2);border:1px solid rgba(255,255,255,0.05);border-radius:6px;overflow:hidden;}
+.faq-q{width:100%;background:none;border:none;padding:20px 24px;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--white);font-family:'Outfit',sans-serif;font-size:0.95rem;font-weight:600;transition:color 0.2s;}
+.faq-q:hover,.faq-q.open{color:var(--orange);}
+.faq-chevron{color:var(--dim);font-size:0.9rem;transition:transform 0.3s;flex-shrink:0;margin-left:12px;}
+.faq-q.open .faq-chevron{transform:rotate(180deg);color:var(--orange);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.3s;}
+.faq-a.open{max-height:200px;padding:0 24px 20px;}
+.faq-a p{font-size:0.88rem;color:var(--muted);line-height:1.7;}
+
+/* CONTACT */
+#contact{padding:100px 0;}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+.contact-label{font-family:'Space Mono',monospace;font-size:0.7rem;color:var(--orange);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:16px;}
+.contact-title{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:900;letter-spacing:-0.03em;margin-bottom:16px;line-height:1.1;}
+.contact-sub{font-size:0.95rem;color:var(--muted);margin-bottom:40px;line-height:1.7;}
+.clinks{display:flex;flex-direction:column;gap:12px;}
+.clink{display:flex;align-items:center;gap:16px;background:var(--dark2);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:16px 20px;text-decoration:none;color:var(--white);transition:border-color 0.2s,transform 0.2s,background 0.2s;}
+.clink:hover{border-color:var(--border);background:rgba(247,147,26,0.04);transform:translateX(4px);}
+.clink-icon{width:40px;height:40px;border-radius:6px;background:rgba(247,147,26,0.1);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+.clink-label{font-size:0.7rem;color:var(--dim);font-family:'Space Mono',monospace;letter-spacing:0.06em;text-transform:uppercase;}
+.clink-val{font-size:0.9rem;font-weight:600;}
+.form-box{background:var(--dark2);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:36px;position:relative;}
+.form-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--orange),var(--orange3),transparent);border-radius:10px 10px 0 0;}
+.form-title{font-size:1.1rem;font-weight:800;margin-bottom:28px;}
+.fg{margin-bottom:16px;}
+.fg label{display:block;font-size:0.7rem;font-weight:700;font-family:'Space Mono',monospace;color:var(--dim);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;}
+.fg input,.fg textarea,.fg select{width:100%;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:6px;padding:12px 16px;color:var(--white);font-family:'Outfit',sans-serif;font-size:0.9rem;outline:none;resize:vertical;transition:border-color 0.2s,background 0.2s;}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--orange);background:rgba(247,147,26,0.04);}
+.fg textarea{min-height:110px;}
+.fg select{appearance:none;cursor:pointer;}
+.fg select option{background:var(--dark2);}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.btn-submit{width:100%;background:var(--orange);color:#000;border:none;padding:14px;border-radius:6px;font-size:0.88rem;font-weight:700;cursor:pointer;margin-top:6px;font-family:'Space Mono',monospace;letter-spacing:0.04em;text-transform:uppercase;transition:background 0.2s,transform 0.2s,box-shadow 0.2s;box-shadow:0 4px 20px rgba(247,147,26,0.3);}
+.btn-submit:hover{background:var(--orange3);transform:translateY(-1px);box-shadow:0 8px 30px rgba(247,147,26,0.45);}
+.btn-submit:disabled{opacity:0.6;cursor:not-allowed;transform:none;}
+#form-ok{display:none;text-align:center;padding:14px;color:var(--orange);font-family:'Space Mono',monospace;font-size:0.8rem;letter-spacing:0.06em;}
+#form-err{display:none;text-align:center;padding:14px;color:#ef4444;font-family:'Space Mono',monospace;font-size:0.78rem;letter-spacing:0.04em;}
+
+/* CTA STRIP */
+.cta-strip{background:var(--orange);padding:64px 0;text-align:center;position:relative;overflow:hidden;}
+.cta-strip::before{content:'B';position:absolute;right:-40px;top:50%;transform:translateY(-50%);font-size:16rem;font-weight:900;color:rgba(0,0,0,0.07);line-height:1;pointer-events:none;}
+.cta-strip h2{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;color:#000;letter-spacing:-0.03em;margin-bottom:12px;position:relative;}
+.cta-strip p{color:rgba(0,0,0,0.65);font-size:1rem;margin-bottom:28px;position:relative;}
+.cta-strip-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;}
+.btn-black{display:inline-flex;align-items:center;gap:8px;background:#000;color:var(--orange);padding:14px 32px;border-radius:6px;font-size:0.9rem;font-weight:700;text-decoration:none;font-family:'Space Mono',monospace;transition:background 0.2s,transform 0.2s;}
+.btn-black:hover{background:#1a1a1a;transform:translateY(-2px);}
+.btn-dark-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;border:2px solid rgba(0,0,0,0.25);color:#000;padding:14px 32px;border-radius:6px;font-size:0.9rem;font-weight:700;text-decoration:none;font-family:'Space Mono',monospace;transition:border-color 0.2s,transform 0.2s;}
+.btn-dark-outline:hover{border-color:#000;transform:translateY(-2px);}
+
+/* FOOTER */
+footer{border-top:1px solid rgba(255,255,255,0.05);padding:56px 0 28px;}
+.footer-top{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px;}
+.footer-brand p{font-size:0.87rem;color:var(--muted);margin-top:12px;line-height:1.65;max-width:240px;}
+.footer-col h4{font-family:'Space Mono',monospace;font-size:0.72rem;font-weight:700;color:var(--orange);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:16px;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.footer-col ul a{font-size:0.85rem;color:var(--dim);text-decoration:none;transition:color 0.2s;}
+.footer-col ul a:hover{color:var(--orange);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.05);padding-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-logo{font-family:'Space Mono',monospace;font-size:0.95rem;font-weight:700;color:var(--white);text-decoration:none;}
+.footer-logo .o{color:var(--orange);}
+.footer-socials{display:flex;gap:10px;}
+.fsoc{width:36px;height:36px;border-radius:6px;background:var(--dark3);border:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:0.95rem;transition:border-color 0.2s,background 0.2s,transform 0.2s;}
+.fsoc:hover{border-color:var(--border);background:rgba(247,147,26,0.1);transform:translateY(-2px);}
+.footer-copy{font-size:0.75rem;color:var(--dim);font-family:'Space Mono',monospace;}
+
+/* UTILS */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+#stb{position:fixed;bottom:28px;right:28px;z-index:50;width:42px;height:42px;background:var(--orange);color:#000;border:none;border-radius:6px;font-size:1rem;cursor:pointer;font-family:'Space Mono',monospace;font-weight:700;opacity:0;transform:translateY(8px);transition:opacity 0.3s,transform 0.3s;box-shadow:0 4px 16px rgba(247,147,26,0.4);}
+#stb.vis{opacity:1;transform:translateY(0);}
+
+/* RESPONSIVE */
+@media(max-width:960px){.footer-top{grid-template-columns:1fr 1fr;}.exp-layout{grid-template-columns:1fr;gap:40px;}.faq-layout{grid-template-columns:1fr;gap:40px;}}
+@media(max-width:768px){nav{top:36px;}.nav-links{display:none;}.hamburger{display:flex;}.about-grid,.contact-grid{grid-template-columns:1fr;}.ach-grid{grid-template-columns:repeat(2,1fr);}.services-grid,.projects-grid{grid-template-columns:1fr;}.testi-grid{grid-template-columns:1fr;}.stats-row{flex-direction:column;border:none;}.stat-cell{border-right:none;border-bottom:1px solid var(--border);}.stat-cell:last-child{border-bottom:none;}.form-row{grid-template-columns:1fr;}.footer-top{grid-template-columns:1fr;}.footer-bottom{flex-direction:column;align-items:flex-start;}}
+@media(max-width:480px){.hero-title{font-size:2.4rem;}.hero-btc{display:none;}.ach-grid{grid-template-columns:1fr 1fr;}}
+
+/* ── COMPREHENSIVE MOBILE OVERRIDES ── */
+@media (max-width: 900px) {
+  .ach-grid { grid-template-columns: repeat(2, 1fr); }
+  .ach-item { border-bottom: 1px solid var(--border2); }
+  .testi-grid { grid-template-columns: repeat(2, 1fr); }
+  .exp-layout { grid-template-columns: 1fr; gap: 40px; }
+  .faq-layout { grid-template-columns: 1fr; gap: 40px; }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  nav { top: 36px !important; }
+  #hero { padding: 120px 0 56px; min-height: auto; }
+  .hero-title { font-size: 2.3rem !important; }
+  .hero-sub { font-size: 0.93rem; }
+  .hero-sub br { display: none; }
+  .hero-actions { gap: 10px; margin-bottom: 36px; }
+  .btn-orange, .btn-outline, .btn-ghost { padding: 12px 22px; font-size: 0.83rem; }
+  .stats-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    flex-direction: unset !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 8px !important;
+    overflow: hidden;
+  }
+  .stat-cell {
+    border-right: 1px solid var(--border) !important;
+    border-bottom: 1px solid var(--border) !important;
+    border-top: none !important;
+    padding: 16px !important;
+  }
+  .stat-cell:nth-child(2n) { border-right: none !important; }
+  .stat-cell:nth-child(3), .stat-cell:nth-child(4) { border-bottom: none !important; }
+  .stat-num { font-size: 1.4rem !important; }
+  .hero-btc { display: none !important; }
+  .about-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .ach-grid { grid-template-columns: repeat(2,1fr) !important; }
+  .ach-item { padding: 28px 16px !important; }
+  .ach-num { font-size: 1.9rem !important; }
+  .services-grid { grid-template-columns: 1fr !important; gap: 12px !important; }
+  .svc-card { border-radius: 8px !important; }
+  .svc-arrow { display: none; }
+  .projects-grid { grid-template-columns: 1fr !important; gap: 12px !important; }
+  .projects-grid .proj-card:last-child:nth-child(odd) { grid-column: unset !important; max-width: 100% !important; }
+  .proj-overlay { opacity: 1 !important; background: rgba(0,0,0,0.5) !important; }
+  .testi-grid { grid-template-columns: 1fr !important; gap: 12px !important; }
+  .exp-layout { grid-template-columns: 1fr !important; gap: 36px !important; }
+  .faq-layout { grid-template-columns: 1fr !important; gap: 36px !important; }
+  .contact-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
+  .form-row { grid-template-columns: 1fr !important; }
+  .footer-top { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .footer-bottom { flex-direction: column !important; align-items: flex-start !important; }
+  .cta-strip-actions { flex-direction: column !important; align-items: center !important; }
+  .btn-black, .btn-dark-outline { width: 100% !important; max-width: 280px !important; justify-content: center !important; }
+  .protocols-row { gap: 8px !important; }
+  .proto-badge { padding: 8px 12px !important; }
+  .avail-banner { font-size: 0.62rem !important; padding: 8px 14px !important; }
+  .section-header { margin-bottom: 36px !important; }
+  #achievements { padding-bottom: 60px !important; }
+  #services, #projects, #experience, #testimonials, #faq, #contact { padding: 60px 0 !important; }
+  #about { padding: 60px 0 !important; }
+  #protocols { padding: 36px 0 !important; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 16px !important; }
+  .hero-title { font-size: 2rem !important; }
+  .avail-banner a { display: block; margin-left: 0; margin-top: 3px; }
+  .ach-item { padding: 20px 10px !important; }
+  .ach-num { font-size: 1.6rem !important; }
+  .about-card { padding: 22px !important; }
+  .mini-stats .ms-num { font-size: 1rem !important; }
+  .form-box { padding: 20px !important; }
+  .cta-strip::before { display: none !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="avail-banner">🟢 AVAILABLE FOR HIRE — Web3 Roles, Grants &amp; Partnerships <a href="#contact">Get in Touch →</a></div>
+
+<nav id="nav">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">Mujeeb<span class="o">.</span>dev</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="nav-hire">Hire Me</a></li>
+    </ul>
+    <div class="hamburger" onclick="openMenu()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <button class="mob-close" onclick="closeMenu()">close</button>
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#projects" onclick="closeMenu()">Projects</a>
+  <a href="#experience" onclick="closeMenu()">Experience</a>
+  <a href="#testimonials" onclick="closeMenu()">Testimonials</a>
+  <a href="#faq" onclick="closeMenu()">FAQ</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
+<section id="hero">
+  <div class="hero-bg">
+    <div class="hero-grid-lines"></div><div class="hero-glow"></div><div class="hero-glow2"></div>
+    <div class="hero-btc">B</div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="blink"></span>Open to Web3 Roles &amp; Dev Grants</div>
+      <h1 class="hero-title">Web3 Builder.<br>Crypto Educator.<br><span class="accent">Vibe Code Dev.</span></h1>
+      <p class="hero-sub">
+        <strong>Adebimpe Mujeeb Adegoke</strong> — Founder of Al-Halal Crypto Academy.<br>
+        Trained <strong>5,000+ youths</strong> in blockchain &amp; DeFi. Generated <strong>$2M+</strong> on Across DEX.<br>
+        On a mission to onboard <strong>1,000,000 people</strong> into crypto across Africa.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-orange">&#9889; Hire Me</a>
+        <a href="#projects" class="btn-outline">&#128301; View Projects</a>
+        <a href="https://wa.me/2348143399914" target="_blank" rel="noopener" class="btn-ghost">&#128172; WhatsApp</a>
+      </div>
+      <div class="stats-row">
+        <div class="stat-cell"><span class="stat-num" data-target="5000" data-suffix="+">0+</span><span class="stat-lbl">Youths Trained</span></div>
+        <div class="stat-cell"><span class="stat-num" data-prefix="$" data-target="2" data-suffix="M+">$0M+</span><span class="stat-lbl">DEX Volume</span></div>
+        <div class="stat-cell"><span class="stat-num" data-target="8" data-suffix="+">0+</span><span class="stat-lbl">Live Products</span></div>
+        <div class="stat-cell"><span class="stat-num" data-target="5" data-suffix="yr+">0yr+</span><span class="stat-lbl">Web3 XP</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-section">
+  <div class="marquee-track">
+    <div class="marquee-item">Crypto Education</div><div class="marquee-item">Community Building</div><div class="marquee-item">DeFi Protocols</div><div class="marquee-item">Airdrop Strategy</div><div class="marquee-item">Web3 Development</div><div class="marquee-item">Al-Halal Academy</div><div class="marquee-item">Across DEX Ranger</div><div class="marquee-item">Blockchain Onboarding</div><div class="marquee-item">Vibe Code Dev</div><div class="marquee-item">1M Mission</div>
+    <div class="marquee-item">Crypto Education</div><div class="marquee-item">Community Building</div><div class="marquee-item">DeFi Protocols</div><div class="marquee-item">Airdrop Strategy</div><div class="marquee-item">Web3 Development</div><div class="marquee-item">Al-Halal Academy</div><div class="marquee-item">Across DEX Ranger</div><div class="marquee-item">Blockchain Onboarding</div><div class="marquee-item">Vibe Code Dev</div><div class="marquee-item">1M Mission</div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="card-wrap reveal">
+        <div class="corner c-tl"></div><div class="corner c-tr"></div><div class="corner c-bl"></div><div class="corner c-br"></div>
+        <div class="about-card">
+          <div class="about-ava"><img src="https://drive.google.com/thumbnail?id=17lvCXkkOBY3Bx8b7czZT8wOrEtDWBcIF&sz=w200" alt="Adebimpe Mujeeb Adegoke" onerror="this.style.display='none';this.parentElement.textContent='MA'"/></div>
+          <div class="about-name">Adebimpe Mujeeb Adegoke</div>
+          <div class="about-role">Crypto Tutor · Web3 Builder · Vibe Dev</div>
+          <div class="about-tags">
+            <span class="otag">DeFi</span><span class="otag">Community</span><span class="otag">Educator</span>
+            <span class="otag dim">Open Source</span><span class="otag dim">Nigeria</span>
+          </div>
+          <div class="about-divider"></div>
+          <div class="mini-stats">
+            <div class="ms-item"><span class="ms-num" data-target="5000" data-suffix="+">0+</span><span class="ms-lbl">Trained</span></div>
+            <div class="ms-item"><span class="ms-num" data-prefix="$" data-target="2" data-suffix="M+">$0</span><span class="ms-lbl">Volume</span></div>
+            <div class="ms-item"><span class="ms-num" data-target="8" data-suffix="+">0+</span><span class="ms-lbl">Products</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Bridging Crypto Knowledge with <span class="orange-text">Real Impact</span></h2>
+        <p>I am <strong>Adebimpe Mujeeb Adegoke</strong> — a results-driven Web3 professional who believes education is the most powerful catalyst for mass blockchain adoption.</p>
+        <p>As founder of <strong>Al-Halal Crypto Academy</strong> and a recognized <strong>Across DEX Referral Ranger</strong>, I've empowered <strong>5,000+ youths</strong> across Nigeria to navigate DeFi confidently — from their first airdrop to their first on-chain trade. My mission: <strong>1,000,000 people</strong> onboarded into crypto.</p>
+        <p>I build too: live DEX interfaces, DeFi dashboards, and community platforms. <strong>Education meets engineering</strong> — that's my edge.</p>
+        <div class="skills-list" id="skillBars">
+          <div class="skill-row-bar"><div class="skill-row-top"><span class="skill-name">&#9658; Crypto Education &amp; Training</span><span class="skill-pct">98%</span></div><div class="skill-track"><div class="skill-fill" data-w="98"></div></div></div>
+          <div class="skill-row-bar"><div class="skill-row-top"><span class="skill-name">&#9658; Community Building &amp; Growth</span><span class="skill-pct">95%</span></div><div class="skill-track"><div class="skill-fill" data-w="95"></div></div></div>
+          <div class="skill-row-bar"><div class="skill-row-top"><span class="skill-name">&#9658; DeFi &amp; DEX Protocols</span><span class="skill-pct">88%</span></div><div class="skill-track"><div class="skill-fill" data-w="88"></div></div></div>
+          <div class="skill-row-bar"><div class="skill-row-top"><span class="skill-name">&#9658; Frontend Web3 Development</span><span class="skill-pct">82%</span></div><div class="skill-track"><div class="skill-fill" data-w="82"></div></div></div>
+          <div class="skill-row-bar"><div class="skill-row-top"><span class="skill-name">&#9658; Airdrop Strategy &amp; Farming</span><span class="skill-pct">92%</span></div><div class="skill-track"><div class="skill-fill" data-w="92"></div></div></div>
+          <div class="skill-row-bar"><div class="skill-row-top"><span class="skill-name">&#9658; Digital Marketing &amp; Branding</span><span class="skill-pct">85%</span></div><div class="skill-track"><div class="skill-fill" data-w="85"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="achievements">
+  <div class="container">
+    <div class="ach-outer reveal">
+      <div class="ach-grid">
+        <div class="ach-item"><span class="ach-num" data-target="5000" data-suffix="+">0</span><div class="ach-label">Youths trained in crypto &amp; digital literacy</div></div>
+        <div class="ach-item"><span class="ach-num" data-prefix="$" data-target="2" data-suffix="M+">$0</span><div class="ach-label">Trading volume as Across Referral Ranger</div></div>
+        <div class="ach-item"><span class="ach-num" data-target="8" data-suffix="+">0</span><div class="ach-label">Live Web3 products built &amp; deployed</div></div>
+        <div class="ach-item"><span class="ach-num" data-target="1" data-suffix="M">0</span><div class="ach-label">People aimed to onboard into crypto</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="protocols">
+  <div class="container">
+    <div class="protocols-label reveal">Protocols &amp; Platforms I've Worked With</div>
+    <div class="protocols-row reveal">
+      <div class="proto-badge"><span class="proto-icon">&#127751;</span><span class="proto-name">Across Protocol</span></div>
+      <div class="proto-badge"><span class="proto-icon">&#128155;</span><span class="proto-name">Bybit</span></div>
+      <div class="proto-badge"><span class="proto-icon">&#127818;</span><span class="proto-name">OrangeX</span></div>
+      <div class="proto-badge"><span class="proto-icon">&#128142;</span><span class="proto-name">Protocol Gemini</span></div>
+      <div class="proto-badge"><span class="proto-icon">&#128332;</span><span class="proto-name">Halal DAO</span></div>
+      <div class="proto-badge"><span class="proto-icon">&#128309;</span><span class="proto-name">Base L2</span></div>
+      <div class="proto-badge"><span class="proto-icon">&#128308;</span><span class="proto-name">Optimism</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-header reveal" style="text-align:center;">
+      <span class="section-tag">What I Do</span>
+      <h2 class="section-title">Services Built for the <span class="orange-text">Web3 Era</span></h2>
+      <p class="section-sub" style="margin:0 auto;">From education to engineering — end-to-end value across the crypto ecosystem.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card reveal"><div class="svc-num">01</div><div class="svc-icon">&#127891;</div><h3>Crypto Education &amp; Training</h3><p>Comprehensive Web3 onboarding programs designed to take complete beginners from zero to on-chain in weeks.</p><ul><li>DeFi fundamentals &amp; wallet setup</li><li>Airdrop farming masterclasses</li><li>Live cohorts &amp; digital bootcamps</li><li>Youth &amp; institutional programs</li></ul><div class="svc-arrow">&#8599;</div></div>
+      <div class="svc-card reveal"><div class="svc-num">02</div><div class="svc-icon">&#127760;</div><h3>Community Building</h3><p>Build, grow, and manage high-engagement Web3 communities that convert browsers into believers.</p><ul><li>Telegram &amp; Discord management</li><li>Ambassador &amp; referral programs</li><li>Engagement campaigns &amp; events</li><li>Community analytics &amp; reporting</li></ul><div class="svc-arrow">&#8599;</div></div>
+      <div class="svc-card reveal"><div class="svc-num">03</div><div class="svc-icon">&#9881;</div><h3>Web3 Product Development</h3><p>Frontend-first DeFi products — clean, fast, and production-ready using modern Web3 tooling.</p><ul><li>DEX &amp; DeFi interfaces</li><li>Landing pages &amp; dashboards</li><li>Educational Web3 platforms</li><li>Next.js + Tailwind + Wagmi stack</li></ul><div class="svc-arrow">&#8599;</div></div>
+      <div class="svc-card reveal"><div class="svc-num">04</div><div class="svc-icon">&#129682;</div><h3>Airdrop Strategy &amp; Guidance</h3><p>Data-driven strategies that turn early protocol participation into meaningful financial rewards.</p><ul><li>Protocol eligibility optimization</li><li>Farming strategy &amp; automation</li><li>Portfolio diversification advice</li><li>Group airdrop hunting sessions</li></ul><div class="svc-arrow">&#8599;</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Portfolio</span>
+      <h2 class="section-title">Projects That <span class="orange-text">Ship</span></h2>
+      <p class="section-sub">Live, deployed Web3 products — from DeFi protocols to community platforms.</p>
+    </div>
+    <div class="projects-grid">
+      <div class="proj-card reveal"><div class="proj-thumb pt1"><div class="proj-thumb-grid"></div><div class="proj-thumb-glow"></div><div class="proj-emoji">&#128722;</div><div class="proj-overlay"><a href="https://poy-market.vercel.app/" target="_blank" rel="noopener" class="prev-btn">&#8599; LIVE PREVIEW</a></div></div><div class="proj-body"><div class="proj-tags"><span class="ptag ptag-o">Web3</span><span class="ptag ptag-o">Marketplace</span><span class="ptag ptag-w">Vercel</span></div><h3>Poy Market</h3><p>Decentralized marketplace interface enabling peer-to-peer crypto-native commerce with wallet connect and on-chain settlement flows.</p><a href="https://poy-market.vercel.app/" target="_blank" rel="noopener" class="proj-link">View Live &#8594;</a></div></div>
+      <div class="proj-card reveal"><div class="proj-thumb pt2"><div class="proj-thumb-grid"></div><div class="proj-thumb-glow"></div><div class="proj-emoji">&#128202;</div><div class="proj-overlay"><a href="https://op-perp.vercel.app/" target="_blank" rel="noopener" class="prev-btn">&#8599; LIVE PREVIEW</a></div></div><div class="proj-body"><div class="proj-tags"><span class="ptag ptag-o">DEX</span><span class="ptag ptag-o">Perps</span><span class="ptag ptag-w">Optimism</span></div><h3>OP Perp DEX</h3><p>Perpetual DEX frontend on Optimism — clean trading interface for leveraged positions with real-time price feeds and order management.</p><a href="https://op-perp.vercel.app/" target="_blank" rel="noopener" class="proj-link">View Live &#8594;</a></div></div>
+      <div class="proj-card reveal"><div class="proj-thumb pt3"><div class="proj-thumb-grid"></div><div class="proj-thumb-glow"></div><div class="proj-emoji">&#128311;</div><div class="proj-overlay"><a href="https://v0-basedex.vercel.app/" target="_blank" rel="noopener" class="prev-btn">&#8599; LIVE PREVIEW</a></div></div><div class="proj-body"><div class="proj-tags"><span class="ptag ptag-o">DEX</span><span class="ptag ptag-o">Base L2</span><span class="ptag ptag-w">DeFi</span></div><h3>V0 Base DEX</h3><p>Next-gen DEX interface on Base L2. Optimized for low-latency swaps, liquidity management, and seamless cross-chain UX.</p><a href="https://v0-basedex.vercel.app/" target="_blank" rel="noopener" class="proj-link">View Live &#8594;</a></div></div>
+      <div class="proj-card reveal"><div class="proj-thumb pt4"><div class="proj-thumb-grid"></div><div class="proj-thumb-glow"></div><div class="proj-emoji">&#127807;</div><div class="proj-overlay"><a href="https://www.rtifnosun.com/" target="_blank" rel="noopener" class="prev-btn">&#8599; LIVE PREVIEW</a></div></div><div class="proj-body"><div class="proj-tags"><span class="ptag ptag-o">NGO</span><span class="ptag ptag-w">Community</span><span class="ptag ptag-w">Osun</span></div><h3>RTIFN Osun</h3><p>Official web platform for RTIFN Osun — a youth empowerment and digital skills initiative bridging technology and underserved communities.</p><a href="https://www.rtifnosun.com/" target="_blank" rel="noopener" class="proj-link">View Live &#8594;</a></div></div>
+      <div class="proj-card reveal"><div class="proj-thumb pt5"><div class="proj-thumb-grid"></div><div class="proj-thumb-glow"></div><div class="proj-emoji">&#129682;</div><div class="proj-overlay"><a href="https://v0-basic-of-crypto-airdrop.vercel.app/#trading" target="_blank" rel="noopener" class="prev-btn">&#8599; LIVE PREVIEW</a></div></div><div class="proj-body"><div class="proj-tags"><span class="ptag ptag-o">Education</span><span class="ptag ptag-o">Airdrop</span><span class="ptag ptag-w">DeFi</span></div><h3>Crypto Airdrop Basics</h3><p>Interactive beginner guide covering crypto airdrops, trading strategies, and DeFi participation — built to onboard the next wave of Web3 users.</p><a href="https://v0-basic-of-crypto-airdrop.vercel.app/#trading" target="_blank" rel="noopener" class="proj-link">View Live &#8594;</a></div></div>
+      <div class="proj-card reveal"><div class="proj-thumb" style="background:#00050a;"><div class="proj-thumb-grid"></div><div class="proj-thumb-glow"></div><div class="proj-emoji">&#128737;</div><div class="proj-overlay"><a href="https://arcium-shield.vercel.app/" target="_blank" rel="noopener" class="prev-btn">&#8599; LIVE PREVIEW</a></div></div><div class="proj-body"><div class="proj-tags"><span class="ptag ptag-o">Privacy</span><span class="ptag ptag-o">Arcium</span><span class="ptag ptag-w">Web3</span></div><h3>Arcium Shield</h3><p>Privacy-first Web3 security interface built on Arcium — enabling encrypted computation and confidential smart contract interactions for DeFi users.</p><a href="https://arcium-shield.vercel.app/" target="_blank" rel="noopener" class="proj-link">View Live &#8594;</a></div></div>
+      <div class="proj-card reveal"><div class="proj-thumb" style="background:#050a00;"><div class="proj-thumb-grid"></div><div class="proj-thumb-glow"></div><div class="proj-emoji">&#128219;</div><div class="proj-overlay"><a href="https://ciphermarket-one.vercel.app/" target="_blank" rel="noopener" class="prev-btn">&#8599; LIVE PREVIEW</a></div></div><div class="proj-body"><div class="proj-tags"><span class="ptag ptag-o">Marketplace</span><span class="ptag ptag-o">DeFi</span><span class="ptag ptag-w">Web3</span></div><h3>Cipher Market</h3><p>A secure, encrypted crypto marketplace interface enabling private peer-to-peer asset trading with on-chain settlement and wallet-native authentication.</p><a href="https://ciphermarket-one.vercel.app/" target="_blank" rel="noopener" class="proj-link">View Live &#8594;</a></div></div>
+      <div class="proj-card reveal"><div class="proj-thumb" style="background:#0a000a;"><div class="proj-thumb-grid"></div><div class="proj-thumb-glow"></div><div class="proj-emoji">&#128200;</div><div class="proj-overlay"><a href="https://my-perpdex.vercel.app/" target="_blank" rel="noopener" class="prev-btn">&#8599; LIVE PREVIEW</a></div></div><div class="proj-body"><div class="proj-tags"><span class="ptag ptag-o">Perps</span><span class="ptag ptag-o">DEX</span><span class="ptag ptag-w">Trading</span></div><h3>My Perp DEX</h3><p>Fully on-chain perpetuals trading interface — featuring leveraged positions, real-time liquidation engine, and a clean pro-trader UI built for speed.</p><a href="https://my-perpdex.vercel.app/" target="_blank" rel="noopener" class="proj-link">View Live &#8594;</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <div class="exp-layout">
+      <div class="reveal">
+        <span class="section-tag">Career</span>
+        <h2 class="section-title">Experience &amp; <span class="orange-text">Milestones</span></h2>
+        <p class="section-sub">A track record forged at the frontier of Web3 — from community floors to protocol dashboards.</p>
+        <div style="margin-top:32px;"><a href="mailto:Elemuje@gmail.com" class="btn-ghost-sm">&#128196; Request Full CV</a></div>
+      </div>
+      <div class="timeline reveal">
+        <div class="tl-line"></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">2022 — Present</div><div class="tl-org">Al-Halal Crypto Academy / Halal DAO</div><div class="tl-role">Founder &amp; Lead Educator</div><div class="tl-desc">Founded Nigeria's premier halal-compliant crypto education platform. Trained 5,000+ youths in blockchain, DeFi, and airdrop strategies. On a mission to onboard 1,000,000 people into crypto through live cohorts, workshops, and digital bootcamps.</div><div class="tl-tags"><span class="tl-tag">Education</span><span class="tl-tag">DAO</span><span class="tl-tag">Community</span><span class="tl-tag">Nigeria</span></div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">2023</div><div class="tl-org">Across Protocol</div><div class="tl-role">DEX Referral Ranger</div><div class="tl-desc">Top-tier community growth role. Generated $2M+ in verified trading volume by driving protocol adoption, educating users on cross-chain bridging, and building referral pipelines across social channels.</div><div class="tl-tags"><span class="tl-tag">DeFi</span><span class="tl-tag">Cross-Chain</span><span class="tl-tag">$2M Volume</span></div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">2023</div><div class="tl-org">Protocol Gemini</div><div class="tl-role">Community Growth &amp; Engagement Lead</div><div class="tl-desc">Managed community growth, moderation, and onboarding. Designed engagement campaigns, educational content, and ambassador programs to accelerate user acquisition.</div><div class="tl-tags"><span class="tl-tag">Growth</span><span class="tl-tag">Ambassador</span><span class="tl-tag">Content</span></div></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-date">2022 — 2023</div><div class="tl-org">Bybit &amp; OrangeX</div><div class="tl-role">Campus &amp; Regional Ambassador</div><div class="tl-desc">Drove exchange adoption among students and professionals through live workshops, referral campaigns, and community events across campuses in Nigeria.</div><div class="tl-tags"><span class="tl-tag">Exchange</span><span class="tl-tag">Ambassador</span><span class="tl-tag">Campus</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="container">
+    <div class="section-header reveal" style="text-align:center;">
+      <span class="section-tag">Social Proof</span>
+      <h2 class="section-title">What the <span class="orange-text">Community Says</span></h2>
+      <p class="section-sub" style="margin:0 auto;">Trusted by builders, learners, and protocols across Africa and beyond.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal"><div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="testi-q">"</div><p class="testi-text">Mujeeb's training was a game-changer. I went from zero crypto knowledge to participating in real DeFi protocols within 3 weeks. His teaching makes complex concepts click instantly.</p><div class="testi-author"><div class="testi-ava">AK</div><div><div class="testi-name">Aisha Kamara</div><div class="testi-handle">DeFi Learner, Lagos</div></div></div></div>
+      <div class="testi-card reveal"><div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="testi-q">"</div><p class="testi-text">The Across community growth Mujeeb drove is impressive. He doesn't just talk Web3 — he delivers volume, users, and real engagement. Exactly the kind of operator protocols need.</p><div class="testi-author"><div class="testi-ava">DB</div><div><div class="testi-name">David Bright</div><div class="testi-handle">Protocol Growth Lead</div></div></div></div>
+      <div class="testi-card reveal"><div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="testi-q">"</div><p class="testi-text">I joined Al-Halal Crypto Academy with nothing but curiosity. Now I'm farming airdrops and teaching others. Mujeeb's impact on my financial journey is immeasurable.</p><div class="testi-author"><div class="testi-ava">YA</div><div><div class="testi-name">Yusuf Abdullahi</div><div class="testi-handle">Academy Graduate</div></div></div></div>
+      <div class="testi-card reveal"><div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="testi-q">"</div><p class="testi-text">We hired Mujeeb for community growth and in 2 months our Telegram grew from 200 to 4,000 active members. His content strategy and engagement systems are top tier.</p><div class="testi-author"><div class="testi-ava">FM</div><div><div class="testi-name">Fatima Musa</div><div class="testi-handle">Web3 Startup Founder</div></div></div></div>
+      <div class="testi-card reveal"><div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="testi-q">"</div><p class="testi-text">The V0 Base DEX Mujeeb built was clean, fast, and production-ready. He shipped in days what agencies quoted weeks for. Exceptional frontend Web3 development skills.</p><div class="testi-author"><div class="testi-ava">BO</div><div><div class="testi-name">Bola Okafor</div><div class="testi-handle">DeFi Project Lead</div></div></div></div>
+      <div class="testi-card reveal"><div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="testi-q">"</div><p class="testi-text">Mujeeb represented Bybit with unmatched professionalism. He brought real users — not bots — and his workshops converted them to active traders. Highly recommend.</p><div class="testi-author"><div class="testi-ava">NK</div><div><div class="testi-name">Ngozi Kelechi</div><div class="testi-handle">Bybit Regional Manager</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="faq-layout">
+      <div class="reveal">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Common <span class="orange-text">Questions</span></h2>
+        <p class="section-sub">Everything you need to know before reaching out — answered upfront.</p>
+        <div style="margin-top:32px;"><a href="mailto:Elemuje@gmail.com" class="btn-ghost-sm">&#9993; Ask a Question</a></div>
+      </div>
+      <div class="faq-list reveal">
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Are you available for full-time Web3 roles? <span class="faq-chevron">&#9660;</span></button><div class="faq-a"><p>Yes — I am actively open to full-time and part-time Web3 roles including community lead, growth manager, educator, and frontend developer positions. Remote-first preferred, but open to opportunities globally.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you apply for dev grants? <span class="faq-chevron">&#9660;</span></button><div class="faq-a"><p>Absolutely. I actively pursue developer and community grants from Web3 protocols, DAOs, and foundations. My track record with Across Protocol and Al-Halal Academy demonstrates measurable impact that makes grant applications compelling.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Can you train my team or institution in crypto? <span class="faq-chevron">&#9660;</span></button><div class="faq-a"><p>Yes. I offer tailored crypto education programs for corporates, NGOs, universities, and youth organizations. Programs range from 1-day workshops to multi-week bootcamps covering DeFi basics to advanced airdrop strategies.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is your Web3 dev stack? <span class="faq-chevron">&#9660;</span></button><div class="faq-a"><p>I build with Next.js (App Router), Tailwind CSS, TypeScript, Wagmi, Viem, and RainbowKit for wallet integration. I deploy primarily on Vercel and have shipped live DEX interfaces on Optimism and Base L2.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How quickly can you respond to inquiries? <span class="faq-chevron">&#9660;</span></button><div class="faq-a"><p>I respond to all serious inquiries within 24 hours. For urgent matters, WhatsApp (+234 814 339 9914) is the fastest channel — I'm typically online daily.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you collaborate with other Web3 builders? <span class="faq-chevron">&#9660;</span></button><div class="faq-a"><p>Absolutely. I'm always open to collaborations with fellow builders, protocol teams, and educators aligned with growing Web3 adoption in Africa and beyond. Reach out and let's explore what we can build together.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="contact-label">Let's Connect</div>
+        <h2 class="contact-title">Ready to Build<br><span class="orange-text">Something Great?</span></h2>
+        <p class="contact-sub">Open for Web3 roles, grant collaborations, community partnerships, and speaking engagements. One message away.</p>
+        <div class="clinks">
+          <a href="https://wa.me/2348143399914" target="_blank" rel="noopener" class="clink"><div class="clink-icon">&#128172;</div><div><div class="clink-label">WhatsApp (Fastest)</div><div class="clink-val">+234 814 339 9914</div></div></a>
+          <a href="mailto:Elemuje@gmail.com" class="clink"><div class="clink-icon">&#9993;</div><div><div class="clink-label">Email</div><div class="clink-val">Elemuje@gmail.com</div></div></a>
+          <a href="https://app.ens.domains/Elemuje.eth" target="_blank" rel="noopener" class="clink"><div class="clink-icon"><a href="https://x.com/Elemudev" target="_blank" rel="noopener" class="clink"><div class="clink-icon">&#128038;</div><div><div class="clink-label">X / Twitter</div><div class="clink-val">@Elemudev</div></div></a>#128311;</div><div><div class="clink-label">ENS</div><div class="clink-val">Elemuje.eth</div></div></a><a href="https://x.com/Elemudev" target="_blank" rel="noopener" class="clink"><div class="clink-icon"><a href="https://x.com/Elemudev" target="_blank" rel="noopener" class="clink"><div class="clink-icon">&#128038;</div><div><div class="clink-label">X / Twitter</div><div class="clink-val">@Elemudev</div></div></a>#128038;</div><div><div class="clink-label">X / Twitter</div><div class="clink-val">@Elemudev</div></div></a>
+          <a href="https://github.com/elemuje" target="_blank" rel="noopener" class="clink"><div class="clink-icon">&#128187;</div><div><div class="clink-label">GitHub</div><div class="clink-val">github.com/elemuje</div></div></a>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="form-box">
+          <div class="form-title">Send a Message &#9889;</div>
+          <form id="cform">
+            <div class="form-row">
+              <div class="fg"><label>Name</label><input type="text" name="name" placeholder="Your full name" required/></div>
+              <div class="fg"><label>Email</label><input type="email" name="email" placeholder="your@email.com" required/></div>
+            </div>
+            <div class="fg">
+              <label>Subject</label>
+              <select name="subject">
+                <option value="">Select a topic...</option>
+                <option>Hire Me / Job Opportunity</option>
+                <option>Grant Application / Collaboration</option>
+                <option>Community Building</option>
+                <option>Crypto Education Partnership</option>
+                <option>Web3 Product Development</option>
+                <option>Speaking Engagement</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="fg"><label>Message</label><textarea name="message" placeholder="Tell me about your project, opportunity, or question..." required></textarea></div>
+            <button type="submit" class="btn-submit" id="form-btn">SEND MESSAGE</button>
+            <div id="form-ok">&#10003; MESSAGE RECEIVED - I'll respond within 24hrs.</div>
+            <div id="form-err">&#10007; Something went wrong. Please try WhatsApp or email directly.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-strip">
+  <div class="container">
+    <h2>Let's Build Web3 Africa Together.</h2>
+    <p>Open for roles, grants, partnerships &amp; speaking engagements. The mission is 1M onboarded.</p>
+    <div class="cta-strip-actions">
+      <a href="mailto:Elemuje@gmail.com" class="btn-black">&#9993; Email Me</a>
+      <a href="https://wa.me/2348143399914" target="_blank" rel="noopener" class="btn-dark-outline">&#128172; WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="footer-logo">Mujeeb<span class="o">.</span>dev</a>
+        <p>Web3 Community Builder, Crypto Educator &amp; Vibe Code Developer based in Nigeria. On a mission to onboard 1,000,000 people into crypto.</p>
+        <div class="footer-socials" style="margin-top:20px;">
+          <a href="https://github.com/elemuje" target="_blank" rel="noopener" class="fsoc" title="GitHub">&#128025;</a>
+          <a href="https://x.com/Elemudev" target="_blank" rel="noopener" class="fsoc" title="Twitter">&#128038;</a>
+          <a href="https://wa.me/2348143399914" target="_blank" rel="noopener" class="fsoc" title="WhatsApp">&#128172;</a>
+          <a href="mailto:Elemuje@gmail.com" class="fsoc" title="Email">&#9993;</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Crypto Education</a></li>
+          <li><a href="#services">Community Building</a></li>
+          <li><a href="#services">Web3 Development</a></li>
+          <li><a href="#services">Airdrop Strategy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:Elemuje@gmail.com">Elemuje@gmail.com</a></li>
+          <li><a href="https://wa.me/2348143399914" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://app.ens.domains/Elemuje.eth" target="_blank" rel="noopener">Elemuje.eth</a></li><li><a href="https://x.com/Elemudev" target="_blank" rel="noopener">@Elemudev</a></li>
+          <li><a href="https://github.com/elemuje" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <a href="#" class="footer-logo">Mujeeb<span class="o">.</span>dev</a>
+      <div class="footer-copy">&#169; 2025 Adebimpe Mujeeb Adegoke. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<button id="stb" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8593;</button>
+
+<script>
+var nav=document.getElementById('nav'),stb=document.getElementById('stb');
+window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>80);stb.classList.toggle('vis',window.scrollY>400);});
+function openMenu(){document.getElementById('mobileNav').classList.add('open');}
+function closeMenu(){document.getElementById('mobileNav').classList.remove('open');}
+var ro=new IntersectionObserver(function(entries){entries.forEach(function(e,i){if(e.isIntersecting){e.target.style.transitionDelay=(i%4)*0.08+'s';e.target.classList.add('visible');ro.unobserve(e.target);}});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(function(el){ro.observe(el);});
+function animCount(el){var target=+el.dataset.target,prefix=el.dataset.prefix||'',suffix=el.dataset.suffix||'',dur=1600,start=performance.now();(function f(now){var t=Math.min((now-start)/dur,1),ease=1-Math.pow(1-t,3);el.textContent=prefix+Math.floor(ease*target).toLocaleString()+suffix;if(t<1)requestAnimationFrame(f);else el.textContent=prefix+target.toLocaleString()+suffix;})(start);}
+var co=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){animCount(e.target);co.unobserve(e.target);}});},{threshold:0.5});
+document.querySelectorAll('[data-target]').forEach(function(el){co.observe(el);});
+var skillObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.querySelectorAll('.skill-fill').forEach(function(bar){bar.style.width=bar.dataset.w+'%';});skillObs.unobserve(e.target);}});},{threshold:0.3});
+var skillSection=document.getElementById('skillBars');
+if(skillSection)skillObs.observe(skillSection);
+function toggleFaq(btn){var item=btn.parentElement,answer=item.querySelector('.faq-a'),isOpen=btn.classList.contains('open');document.querySelectorAll('.faq-q').forEach(function(b){b.classList.remove('open');b.parentElement.querySelector('.faq-a').classList.remove('open');});if(!isOpen){btn.classList.add('open');answer.classList.add('open');}}
+document.getElementById('cform').addEventListener('submit',async function(e){
+  e.preventDefault();
+  var btn=document.getElementById('form-btn');
+  var ok=document.getElementById('form-ok');
+  var err=document.getElementById('form-err');
+  btn.textContent='SENDING...';
+  btn.disabled=true;
+  ok.style.display='none';
+  err.style.display='none';
+  try{
+    var res=await fetch('https://formspree.io/f/mpqykdpv',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(this)});
+    if(res.ok){
+      btn.style.display='none';
+      ok.style.display='block';
+      this.reset();
+    } else {
+      throw new Error('fail');
+    }
+  } catch(ex){
+    btn.textContent='SEND MESSAGE';
+    btn.disabled=false;
+    err.style.display='block';
+  }
+});
+</script>
+</body>
+</html>
